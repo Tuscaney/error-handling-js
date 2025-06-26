@@ -41,10 +41,10 @@ fetchData();
 
 
 // Part 3: Debugging JavaScript Errors
-function buggyGreet(name) {
+function greet(name) {
   if ((name = undefined)) {
     console.log("Hello, " + name);
   }
 }
 
-buggyGreet();
+greet();
