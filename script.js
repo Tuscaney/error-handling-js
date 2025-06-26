@@ -38,3 +38,13 @@ async function fetchData() {
 
 // Call the function to test
 fetchData();
+
+
+// Part 3: Debugging JavaScript Errors
+function buggyGreet(name) {
+  if ((name = undefined)) {
+    console.log("Hello, " + name);
+  }
+}
+
+buggyGreet();
