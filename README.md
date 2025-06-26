@@ -58,6 +58,6 @@ The project is broken into 3 parts and includes screenshots of the output for ea
 
 ## 🔗 Submission Link
 
-> Replace this line with your GitHub repository URL  
-> Example: `https://github.com/yourusername/error-handling-js`
+> (https://github.com/Tuscaney/error-handling-js/tree/master)  
+
 
