@@ -44,13 +44,12 @@ fetchData();
 
 // Buggy version (renamed to avoid conflict)
 function buggyGreet(name) {
-  if ((name = undefined)) {
-    console.log("Hello, " + name);
-  }
+  name = undefined; // Bug: assignment instead of comparison
+  console.log("Hello, " + name); // Will always log "Hello, undefined"
 }
 
 console.log("Running buggyGreet()");
-buggyGreet(); // Will output: Hello, undefined
+buggyGreet(); // Demonstrates buggy behavior
 
 
 // Fixed version
@@ -63,7 +62,7 @@ function greet(name) {
 }
 
 console.log("Running fixed greet()");
-greet();            // Hello, Guest!
-greet("Tuscaney");  // Hello, Tuscaney
+greet();            // Logs: Hello, Guest!
+greet("Tuscaney");  // Logs: Hello, Tuscaney
 
 
