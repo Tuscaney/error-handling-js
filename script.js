@@ -41,10 +41,29 @@ fetchData();
 
 
 // Part 3: Debugging JavaScript Errors
-function greet(name) {
+
+// Buggy version (renamed to avoid conflict)
+function buggyGreet(name) {
   if ((name = undefined)) {
     console.log("Hello, " + name);
   }
 }
 
-greet();
+console.log("Running buggyGreet()");
+buggyGreet(); // Will output: Hello, undefined
+
+
+// Fixed version
+function greet(name) {
+  if (name === undefined) {
+    console.log("Hello, Guest!");
+  } else {
+    console.log("Hello, " + name);
+  }
+}
+
+console.log("Running fixed greet()");
+greet();            // Hello, Guest!
+greet("Tuscaney");  // Hello, Tuscaney
+
+
