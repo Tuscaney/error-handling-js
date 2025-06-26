@@ -15,3 +15,26 @@ function divideNumbers(a, b) {
 // Test cases
 divideNumbers(10, 2); // should show result
 divideNumbers(5, 0);  // should show error
+
+
+// Part 2: Error Handling in Asynchronous Code
+async function fetchData() {
+  try {
+    const response = await fetch("https://httpstat.us/500");
+
+    // Manually check for a failed response
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.text();
+    console.log("Fetched Data:", data);
+  } catch (error) {
+    console.error("Fetch Error:", error.message);
+  } finally {
+    console.log("Fetch attempt finished.");
+  }
+}
+
+// Call the function to test
+fetchData();
